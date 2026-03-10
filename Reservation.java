@@ -14,9 +14,4 @@ return guestName;
 public String getRoomType() {
 return roomType;
 }
-
-public void displayReservation() {
-System.out.println("Guest Name: "+guestName);
-System.out.println("Requested Room Type: "+roomType);
-}
 }
