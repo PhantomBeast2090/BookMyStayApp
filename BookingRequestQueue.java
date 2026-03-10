@@ -12,10 +12,12 @@ public void addBookingRequest(Reservation reservation) {
 bookingQueue.add(reservation);
 }
 
-public void displayBookingRequests() {
-for(Reservation r:bookingQueue) {
-r.displayReservation();
-System.out.println();
+public Reservation getNextRequest() {
+return bookingQueue.poll();
+}
+
+public boolean hasRequests() {
+return !bookingQueue.isEmpty();
 }
 }
-}
+
