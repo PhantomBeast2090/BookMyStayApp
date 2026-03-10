@@ -1,28 +1,22 @@
-public class UseCase2RoomInitialization {
+public class UseCase3InventorySetup {
 public static void main(String[] args) {
-Room singleRoom=new SingleRoom();
-Room doubleRoom=new DoubleRoom();
-Room suiteRoom=new SuiteRoom();
+RoomInventory inventory=new RoomInventory();
 
-int singleAvailability=5;
-int doubleAvailability=3;
-int suiteAvailability=2;
-
-System.out.println("Hotel Room Initialization");
+System.out.println("Hotel Room Inventory");
 System.out.println();
 
 System.out.println("Single Room:");
-singleRoom.displayRoomDetails();
-System.out.println("Available: "+singleAvailability);
+inventory.displayRoomDetails("Single Room");
+System.out.println("Available: "+inventory.getAvailability("Single Room"));
 System.out.println();
 
 System.out.println("Double Room:");
-doubleRoom.displayRoomDetails();
-System.out.println("Available: "+doubleAvailability);
+inventory.displayRoomDetails("Double Room");
+System.out.println("Available: "+inventory.getAvailability("Double Room"));
 System.out.println();
 
 System.out.println("Suite Room:");
-suiteRoom.displayRoomDetails();
-System.out.println("Available: "+suiteAvailability);
+inventory.displayRoomDetails("Suite Room");
+System.out.println("Available: "+inventory.getAvailability("Suite Room"));
 }
 }
